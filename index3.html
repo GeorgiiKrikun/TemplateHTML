@@ -4,18 +4,19 @@
 <title>CSS Website Layout</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 <style>
 * {
   box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 /* Style the header */
 .header {
-  background-color: #f1f1f1;
+  /*background-color: #f1f1f1;*/
   padding: 20px;
   text-align: center;
 }
@@ -23,30 +24,17 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  display: flex;
   background-color: #333;
 }
 
 /* Style the topnav links */
 .topnav a {
-  flex: 0 0 auto;
+  float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
-
-/* Style the topnav links */
-.topnav a.login {
-  color: #f2f2f2;
-  flex: 0 0 auto;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.spacer {
-  flex: 1 1 auto;
 }
 
 /* Change color on hover */
@@ -62,19 +50,13 @@ body {
 }
 
 /* Left and right column */
-.column.left-side {
+.column.side {
   width: 25%;
-  text-align: right;
-}
-.column.right-side {
-  width: 25%;
-  text-align: left;
 }
 
 /* Middle column */
 .column.middle {
   width: 50%;
-  min-height: 60vh;
 }
 
 /* Clear floats after the columns */
@@ -95,25 +77,27 @@ body {
 .footer {
   background-color: #f1f1f1;
   padding: 10px;
-  height: auto;
   text-align: center;
 }
 </style>
 </head>
 <body>
 
+<div class="header">
+  <h1>Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
 <div class="topnav">
   <a href="#">Link</a>
   <a href="#">Link</a>
   <a href="#">Link</a>
-  <div class="spacer"></div>
-  <a href="#" class="login">Login</a>
 </div>
 
 <div class="row">
-  <div class="column left-side">
+  <div class="column side">
     <h2>Side</h2>
-    <p>consectetur adipiscing elit..</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
   </div>
   
   <div class="column middle">
@@ -122,15 +106,15 @@ body {
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   
-  <div class="column right-side">
+  <div class="column side">
     <h2>Side</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
   </div>
 </div>
 
-<footer class="footer">
+<div class="footer">
   <p>Footer</p>
-</footer>
+</div>
   
 </body>
 </html>

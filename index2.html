@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example with Pico.css</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+            background-color: var(--background);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            margin-top: 60px; /* Adjust based on navbar height */
+        }
+        .sidebar {
+            width: 300px;
+            padding: 1rem;
+            background-color: var(--background);
+            position: fixed;
+            top: 60px; /* Adjust based on navbar height */
+            bottom: 0;
+        }
+        .main-content {
+            flex: 1;
+            padding: 1rem;
+            margin-left: 200px; /* Adjust based on sidebar width */
+            margin-top: 60px; /* Adjust based on navbar height */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#" class="secondary">Link 2</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h1>Main Content</h1>
+            <p>This is the main content area.</p>
+            <p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p>
+            <p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p>
+            <p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p>
+            <p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p>
+            <p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p>
+            <p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p><p>This is the main content area.</p>
+        </main>
+    </div>
+</body>
+</html>
