@@ -11,6 +11,13 @@
 
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+.content {
+    display: flex;
+    flex: 1 0 auto;
 }
 
 /* Style the header */
@@ -23,6 +30,7 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
+  flex: 0 0 auto;
   display: flex;
   background-color: #333;
 }
@@ -62,19 +70,24 @@ body {
 }
 
 /* Left and right column */
-.column.left-side {
-  width: 25%;
+.left-side {
+  flex: 1 0 auto;
   text-align: right;
+  max-width: 25vw;
+  padding: 10px;
 }
-.column.right-side {
-  width: 25%;
+.right-side {
+  flex: 1 0 auto;
   text-align: left;
+  max-width: 25vw;
+  padding: 10px;
 }
 
 /* Middle column */
-.column.middle {
-  width: 50%;
-  min-height: 60vh;
+.middle {
+  flex: 2 0 auto;
+  max-width: 50vw;
+  padding: 10px;
 }
 
 /* Clear floats after the columns */
@@ -110,23 +123,25 @@ body {
   <a href="#" class="login">Login</a>
 </div>
 
-<div class="row">
-  <div class="column left-side">
+<div class="content">
+  <div class="left-side">
     <h2>Side</h2>
     <p>consectetur adipiscing elit..</p>
   </div>
   
-  <div class="column middle">
+  <div class="middle">
     <h2>Main Content</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   
-  <div class="column right-side">
+  <div class="right-side">
     <h2>Side</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
   </div>
 </div>
+
+<div class = "spacer" style="min-height=100px;"></div>
 
 <footer class="footer">
   <p>Footer</p>
