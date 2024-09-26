@@ -113,40 +113,87 @@ body {
 }
 </style>
 </head>
+<script>
+  function addFileInput() {
+      // Create a new div for the new file input
+      var newDiv = document.createElement('div');
+      newDiv.className = 'upload-container';
+
+      // Create a new file input element
+      var newInput = document.createElement('input');
+      newInput.type = 'file';
+      newInput.name = 'fileToUpload[]';
+
+      // Append the new input to the new div
+      newDiv.appendChild(newInput);
+
+      // Append the new div to the form
+      document.getElementById('uploadForm').insertBefore(newDiv, document.getElementById('uploadForm').children[document.getElementById('uploadForm').children.length - 2]);
+  }
+</script>
 <body>
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
+  <a href="#">Home</a>
+  <a href="#">Protect</a>
+  <a href="#">Restore</a>
+  <a href="#">Try</a>
   <div class="spacer"></div>
   <a href="#" class="login">Login</a>
 </div>
 
 <div class="content">
   <div class="left-side">
-    <h2>Side</h2>
-    <p>consectetur adipiscing elit..</p>
   </div>
   
   <div class="middle">
-    <h2>Main Content</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <h2>Upload your files here</h2>
+    <p> Supported file types: 
+      <ul>
+        <li>Plaintext files <b>.txt</b></li>
+        <li>Microsoft Documents 2007: Word <b>.docx</b>, Excel <b>.docx</b> </li>
+        <li>OpenDocument format: Writer <b>.odt</b>, Calc <b>.ods</b></li>
+        <li>Zip archives <b>.zip</b></li>
+      </ul>
+    </p>
+    <button type="button" onclick="addFileInput()">Add Another File</button><br><br>
+    <form action="upload.php" method="post" enctype="multipart/form-data" id="uploadForm">
+      <div class="upload-container">
+          <input type="file" name="fileToUpload[]" id="fileToUpload">
+      </div>
+      <br>
+      <input type="submit" value="Process" name="submit">
+  </form>
+
+
   </div>
   
   <div class="right-side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+
   </div>
 </div>
 
 <div class = "spacer" style="min-height=100px;"></div>
 
-<footer class="footer">
-  <p>Footer</p>
-</footer>
-  
+    <script>
+        function addFileInput() {
+            // Create a new div for the new file input
+            var newDiv = document.createElement('div');
+            newDiv.className = 'upload-container';
+
+            // Create a new file input element
+            var newInput = document.createElement('input');
+            newInput.type = 'file';
+            newInput.name = 'fileToUpload[]';
+
+            // Append the new input to the new div
+            newDiv.appendChild(newInput);
+
+            // Append the new div to the form
+            document.getElementById('uploadForm').insertBefore(newDiv, document.getElementById('uploadForm').children[document.getElementById('uploadForm').children.length - 2]);
+        }
+    </script>
+
 </body>
 </html>
 
